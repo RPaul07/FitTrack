@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">lab3</string>
+    <string name="full_name">Full Name</string>
+    <string name="e_mail">email@gmail.com</string>
+    <string name="rowdy_meal">Rowdy Meal</string>
+    <string name="login_title">Log In</string>
+    <string name="howdy_txt">Howdy Roadrunner!!</string>
+    <string name="user_name">Username</string>
+    <string name="pass_word">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="signUp">Sign Up</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="signUP">Sign In</string>
+    <string name="createAccount">Do not have an account?</string>
+    <string name="fullName">Full Name</string>
+    <string name="email">Email</string>
+</resources>
