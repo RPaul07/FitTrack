@@ -47,7 +47,7 @@ public class MainActivity extends ComponentActivity {
                 int id = authentication(uText.getText().toString(),uPass.getText().toString());
                 //Account account = authentication(uText.getText().toString(),uPass.getText().toString());
                 if(id>0){
-                    Intent intent = new Intent(MainActivity.this,ProfileActivity.class);
+                    Intent intent = new Intent(MainActivity.this,HomeActivity.class);
                     intent.putExtra("id",id);
                     startActivity(intent);
                 }
