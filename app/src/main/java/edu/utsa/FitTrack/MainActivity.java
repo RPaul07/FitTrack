@@ -76,10 +76,8 @@ public class MainActivity extends ComponentActivity {
         String[] arr = null;
         boolean authenticated = false;
         int id = -1;
-        File f = new File(getFilesDir().getAbsolutePath()+"/login.txt");
         try{
-            if(f.exists()) {
-                scan = new Scanner(openFileInput("login.txt"));
+            scan = new Scanner(getAssets().open("login.txt"));
                 while (scan.hasNext()) {
                     str = scan.nextLine();
                     arr = str.split(",");
@@ -91,14 +89,9 @@ public class MainActivity extends ComponentActivity {
 
                 }
                 scan.close();
-            }
+            } catch (IOException ex) {
+            throw new RuntimeException(ex);
         }
-        catch (IOException e){
-            Toast.makeText(this,"Error: "+e.getMessage(),Toast.LENGTH_SHORT);
-            //System.out.println("Error: "+ e.getMessage());
-        }
-
-
         return id;
     }
 
