@@ -14,8 +14,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-/*Each activity is like each page for the user. And each activity has a life cycle.*/
-// make sure to pick androidx.activity for ComponentActivity
 public class MainActivity extends ComponentActivity {
 
 
