@@ -19,6 +19,34 @@
     <string name="title_calorie">Calorie Tracker</string>
     <string name="title_goals">Goals</string>
     <string name="title_notifications">Notifications</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_help">Help</string>
+    <string-array name="workout_type_items">
+        <item>Strength</item>
+        <item>Cardio</item>
+    </string-array>
+    <string-array name="athlete_level_items">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Advanced</item>
+    </string-array>
+    <string-array name="TimeFrames">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+    <string-array name="GoalType">
+        <item>Calories</item>
+        <item>Weight</item>
+        <item>Steps</item>
+    </string-array>
+    <string-array name="MealType">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snack</item>
+    </string-array>
+    <string-array name="Times">
+        <item>AM</item>
+        <item>PM</item>
+    </string-array>
 </resources>

@@ -3,6 +3,9 @@ package edu.utsa.lab3;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -28,8 +31,20 @@ public class ReportsActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        ImageView graph = findViewById(R.id.progress_graph);
+        Button graphProgress = findViewById(R.id.GraphProgress);
+        graphProgress.setOnClickListener(v -> {
+            graph.setVisibility(View.VISIBLE);
+        });
+
+        Button previousReports = findViewById(R.id.previousReports);
+        previousReports.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), PreviousReportsActivity.class);
+            startActivity(intent);
+        });
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        navView.setItemIconTintList(ColorStateList.valueOf(ContextCompat.getColor(this, android.R.color.white))); // Removes icon tint
+        navView.setItemIconTintList(null); // Removes icon tint
         navView.setItemTextColor(null);
         navView.setOnItemSelectedListener(item ->  {
             int itemId = item.getItemId();

@@ -2,7 +2,12 @@ package edu.utsa.lab3;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -28,8 +33,20 @@ public class NewWorkoutActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        Button newExercise = findViewById(R.id.addExercise);
+        newExercise.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), AddWorkoutActivity.class);
+            startActivity(intent);
+        });
+
+        Button finishWorkout = findViewById(R.id.FinishWorkout);
+        finishWorkout.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+            startActivity(intent);
+        });
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        navView.setItemIconTintList(ColorStateList.valueOf(ContextCompat.getColor(this, android.R.color.white))); // Removes icon tint
+        navView.setItemIconTintList(null); // Removes icon tint
         navView.setItemTextColor(null);
         navView.setOnItemSelectedListener(item ->  {
             int itemId = item.getItemId();

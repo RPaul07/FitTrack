@@ -27,7 +27,7 @@ public class MainController implements View.OnClickListener{
 
 //        String username = usernameInput.getText().toString();
 //        String password = passwordInput.getText().toString();
-        if(idOfButtonPressed == R.id.login_btn){
+        if(idOfButtonPressed == R.id.LoginBtn){
             Intent intent = new Intent(mainActivity, ProfileActivity.class);
             mainActivity.startActivity(intent);
             return;

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="?attr/actionBarSize"
-    tools:context=".NewWorkoutActivity">
+    tools:context=".AddWorkoutActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -76,11 +76,24 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-black"
-            android:text="New Workout"
+            android:text="Add Workout"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="40sp"
             android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/excersiseName"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_margin="16dp"
+            android:background="@android:drawable/editbox_background"
+            android:gravity="center"
+            android:hint="Exercise Name"
+            android:inputType="text"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -88,56 +101,81 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/exersiseView"
-                android:orientation="vertical" >
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp">
 
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:fontFamily="sans-serif-condensed-light"
-                    android:text="Exercises Appear Here"
+            <!-- TableLayout for tracking sets, pounds, and reps -->
+
+                <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1"
+                android:layout_marginBottom="16dp">
+
+                <!-- Table Row with initial headers (optional) -->
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="16dp"
+                        android:text="Set"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="16dp"
+                        android:text="Pounds"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="16dp"
+                        android:text="Reps"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <!-- New rows will be added here programmatically -->
+
+            </TableLayout>
+
+                <Button
+                    android:id="@+id/addRows"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_button"
+                    android:fontFamily="monospace"
+                    android:text="+"
                     android:textAlignment="center"
-                    android:textColor="#FFFFFF"
-                    android:textSize="30sp"
+                    android:textSize="40dp"
                     android:textStyle="bold" />
             </LinearLayout>
-        </ScrollView>
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:fontFamily="sans-serif-condensed-light"
-            android:text="Add Exercise"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+        </ScrollView>
 
         <Button
             android:id="@+id/addExercise"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/round_button"
-            android:fontFamily="monospace"
-            android:text="+"
-            android:textAlignment="center"
-            android:textSize="60sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/FinishWorkout"
-            android:layout_width="150dp"
+            android:layout_width="200dp"
             android:layout_height="80dp"
             android:layout_marginTop="50dp"
             android:background="@drawable/curved_button"
             android:fontFamily="monospace"
-            android:text="Finish Workout"
+            android:text="Add Exercise"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="20sp"

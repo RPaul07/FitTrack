@@ -14,9 +14,9 @@
       android:layout_height="match_parent"
       android:background="#4D4C4C"
       android:gravity="center_horizontal"
-      app:layout_constraintTop_toTopOf="parent"
       android:orientation="vertical"
-      tools:layout_editor_absoluteX="-1dp" >
+      app:layout_constraintTop_toTopOf="parent"
+      tools:layout_editor_absoluteX="-1dp">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -43,14 +43,14 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="-24dp"
             android:layout_marginTop="30dp"
+            android:clickable="true"
             android:fontFamily="monospace"
             android:text="FitTrack"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="45sp"
             android:textStyle="bold"
-            android:typeface="monospace"
-            android:clickable="true"/>
+            android:typeface="monospace" />
 
         <ImageButton
             android:id="@+id/imageButton3"
@@ -71,17 +71,97 @@
       </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 
-    <TextView
-        android:id="@+id/textView4"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Help"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Help"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/gettingStartedBtn"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/curved_button"
+            android:fontFamily="monospace"
+            android:text="Getting Started"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/howLogWorkoutsBtn"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/curved_button"
+            android:fontFamily="monospace"
+            android:text="How to log workouts"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/howCreatePresets"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/curved_button"
+            android:fontFamily="monospace"
+            android:text="How to create presets"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/howTrackCalories"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/curved_button"
+            android:fontFamily="monospace"
+            android:text="How to track calories"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/howSetGoals"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/curved_button"
+            android:fontFamily="monospace"
+            android:text="How to set goals"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+      </LinearLayout>
+
+    </ScrollView>
+
   </LinearLayout>
 
   <com.google.android.material.bottomnavigation.BottomNavigationView

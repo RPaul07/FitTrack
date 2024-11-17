@@ -1,6 +1,7 @@
 package edu.utsa.lab3;
 
 import androidx.activity.ComponentActivity;
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -29,6 +30,7 @@ public class MainActivity extends ComponentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         //assets = getAssets();
         Toast.makeText(this,"Hello World",Toast.LENGTH_SHORT).show();
@@ -37,13 +39,13 @@ public class MainActivity extends ComponentActivity {
     }
 
     private void setupButton(){
-        Button loginBtn = (Button) findViewById(R.id.login_btn);
-        Button signupBtn = (Button) findViewById(R.id.signup_btn);
+        Button loginBtn = (Button) findViewById(R.id.LoginBtn);
+        //Button signupBtn = (Button) findViewById(R.id.signup_btn);
         loginBtn.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                EditText uText = (EditText) findViewById(R.id.username_input);
-                EditText uPass = (EditText) findViewById(R.id.password_input);
+                EditText uText = (EditText) findViewById(R.id.usernameInput);
+                EditText uPass = (EditText) findViewById(R.id.passwordInput);
                 int id = authentication(uText.getText().toString(),uPass.getText().toString());
                 //Account account = authentication(uText.getText().toString(),uPass.getText().toString());
                 if(id>0){
@@ -59,6 +61,7 @@ public class MainActivity extends ComponentActivity {
                 }
             }
         });
+        /*
         signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +69,7 @@ public class MainActivity extends ComponentActivity {
                 startActivity(intent);
             }
         });
+         */
     }
 
     private int authentication(String username, String password){

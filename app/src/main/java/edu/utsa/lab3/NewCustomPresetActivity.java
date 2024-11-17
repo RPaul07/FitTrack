@@ -9,16 +9,19 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class WorkoutsActivity extends AppCompatActivity {
+public class NewCustomPresetActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_workouts);
+        setContentView(R.layout.activity_new_custom_preset);
 
         TextView textView = findViewById(R.id.textView2);
         textView.setOnClickListener(v -> {
@@ -26,21 +29,15 @@ public class WorkoutsActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        Button newWorkout = findViewById(R.id.newWorkout);
-        newWorkout.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), NewWorkoutActivity.class);
+        Button newExercise = findViewById(R.id.addExercise);
+        newExercise.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), AddWorkoutActivity.class);
             startActivity(intent);
         });
 
-        Button customPresets = findViewById(R.id.customPresets);
-        customPresets.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), CustomPresetsActivity.class);
-            startActivity(intent);
-        });
-
-        Button reports = findViewById(R.id.reports);
-        reports.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), ReportsActivity.class);
+        Button savePreset = findViewById(R.id.savePreset);
+        savePreset.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
             startActivity(intent);
         });
 

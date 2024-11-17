@@ -39,7 +39,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        navView.setItemIconTintList(ColorStateList.valueOf(ContextCompat.getColor(this, android.R.color.white))); // Removes icon tint
+        navView.setItemIconTintList(null); // Removes icon tint
         navView.setItemTextColor(null);
         navView.setOnItemSelectedListener(item ->  {
             int itemId = item.getItemId();

@@ -30,7 +30,7 @@ public class HelpActivity extends AppCompatActivity {
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setSelectedItemId(R.id.navigation_help);
-        navView.setItemIconTintList(ColorStateList.valueOf(ContextCompat.getColor(this, android.R.color.white))); // Removes icon tint
+        navView.setItemIconTintList(null); // Removes icon tint
         navView.setItemTextColor(null);
 
         navView.setOnItemSelectedListener(item ->  {

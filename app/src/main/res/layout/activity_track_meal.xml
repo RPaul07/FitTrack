@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="?attr/actionBarSize"
-    tools:context=".ReportsActivity">
+    tools:context=".TrackMealActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -78,33 +78,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-black"
-                android:text="Workout Reports"
+                android:text="Track Meal"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="40sp"
                 android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/previousReports"
-                android:layout_width="400dp"
-                android:layout_height="75dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/curved_button"
-                android:fontFamily="monospace"
-                android:text="View Previous Reports"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="25sp"
-                android:textStyle="bold" />
-
             <Spinner
-                android:id="@+id/reportType"
+                android:id="@+id/mealType"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
-                android:layout_margin="16dp"
+                android:layout_marginTop="15dp"
                 android:background="@android:drawable/spinner_background"
-                android:entries="@array/workout_type_items"
+                android:entries="@array/MealType"
                 android:gravity="center"
                 android:padding="8dp"
                 android:popupBackground="#FFFFFF"
@@ -113,37 +99,38 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editDate1"
+                    android:id="@+id/editTime"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="15dp"
                     android:background="@android:drawable/editbox_background"
                     android:gravity="center"
-                    android:hint="Date"
-                    android:inputType="date"
+                    android:hint="Time"
+                    android:inputType="time"
                     android:padding="8dp"
                     android:textColor="#000000"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/textViewTo"
-                    android:layout_width="50dp"
+                <Spinner
+                    android:id="@+id/AMPM"
+                    android:layout_width="75dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="sans-serif-black"
-                    android:text="To"
-                    android:textAlignment="center"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:layout_marginTop="15dp"
+                    android:background="@android:drawable/spinner_background"
+                    android:entries="@array/Times"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:popupBackground="#FFFFFF"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center" />
 
                 <EditText
-                    android:id="@+id/editDate2"
+                    android:id="@+id/editDate"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="15dp"
@@ -156,25 +143,44 @@
                     android:textSize="16sp" />
             </LinearLayout>
 
+            <EditText
+                android:id="@+id/mealName"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:drawable/editbox_background"
+                android:gravity="center"
+                android:hint="Meal Name"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/Calories"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:drawable/editbox_background"
+                android:gravity="center"
+                android:hint="Meal Calories"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
             <Button
-                android:id="@+id/GraphProgress"
-                android:layout_width="125dp"
-                android:layout_height="60dp"
+                android:id="@+id/trackmealBtn"
+                android:layout_width="170dp"
+                android:layout_height="70dp"
                 android:layout_marginTop="50dp"
                 android:background="@drawable/curved_button"
                 android:fontFamily="monospace"
-                android:text="Graph"
+                android:text="Track Meal"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/progress_graph"
-                android:layout_width="350dp"
-                android:layout_height="400dp"
-                android:visibility="gone"
-                app:srcCompat="@drawable/progress_graph" />
 
         </LinearLayout>
     </ScrollView>

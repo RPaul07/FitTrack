@@ -3,44 +3,28 @@ package edu.utsa.lab3;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class WorkoutsActivity extends AppCompatActivity {
+public class PreviousReportsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_workouts);
+        setContentView(R.layout.activity_previous_reports);
 
         TextView textView = findViewById(R.id.textView2);
         textView.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-            startActivity(intent);
-        });
-
-        Button newWorkout = findViewById(R.id.newWorkout);
-        newWorkout.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), NewWorkoutActivity.class);
-            startActivity(intent);
-        });
-
-        Button customPresets = findViewById(R.id.customPresets);
-        customPresets.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), CustomPresetsActivity.class);
-            startActivity(intent);
-        });
-
-        Button reports = findViewById(R.id.reports);
-        reports.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), ReportsActivity.class);
             startActivity(intent);
         });
 
@@ -69,5 +53,6 @@ public class WorkoutsActivity extends AppCompatActivity {
             }
             return false;
         });
+
     }
 }

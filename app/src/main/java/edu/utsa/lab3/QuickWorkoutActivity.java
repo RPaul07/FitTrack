@@ -3,7 +3,9 @@ package edu.utsa.lab3;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,8 +30,13 @@ public class QuickWorkoutActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        Button setGoal = findViewById(R.id.generateQuickWorkout);
+        setGoal.setOnClickListener(v -> {
+            Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
+        });
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
-        navView.setItemIconTintList(ColorStateList.valueOf(ContextCompat.getColor(this, android.R.color.white))); // Removes icon tint
+        navView.setItemIconTintList(null); // Removes icon tint
         navView.setItemTextColor(null);
         navView.setOnItemSelectedListener(item ->  {
             int itemId = item.getItemId();
