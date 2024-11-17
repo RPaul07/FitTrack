@@ -1,13 +1,12 @@
-package edu.utsa.lab3.controller;
+package edu.utsa.FitTrack.controller;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 import android.view.View;
 
-import edu.utsa.lab3.MainActivity;
-import edu.utsa.lab3.ProfileActivity;
-import edu.utsa.lab3.R;
+import edu.utsa.FitTrack.MainActivity;
+import edu.utsa.FitTrack.ProfileActivity;
+import edu.utsa.FitTrack.R;
 
 public class MainController implements View.OnClickListener{
 

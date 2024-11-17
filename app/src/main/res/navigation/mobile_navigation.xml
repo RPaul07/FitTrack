@@ -5,24 +5,24 @@
     android:id="@+id/mobile_navigation">
     <activity
         android:id="@+id/navigation_notifications"
-        android:name="edu.utsa.lab3.NotificationsActivity"
+        android:name="edu.utsa.FitTrack.NotificationsActivity"
         android:label="@string/title_notifications"
         tools:layout="@layout/activity_notifications" />
 
     <activity
         android:id="@+id/navigation_calorie"
-        android:name="edu.utsa.lab3.CalorieActivity"
+        android:name="edu.utsa.FitTrack.CalorieActivity"
         android:label="@string/title_calorie"
         tools:layout="@layout/activity_calorie" />
 
     <activity
         android:id="@+id/navigation_goals"
-        android:name="edu.utsa.lab3.GoalsActivity"
+        android:name="edu.utsa.FitTrack.GoalsActivity"
         android:label="@string/title_goals"
         tools:layout="@layout/activity_goals" />
     <activity
         android:id="@+id/navigation_help"
-        android:name="edu.utsa.lab3.HelpActivity"
+        android:name="edu.utsa.FitTrack.HelpActivity"
         android:label="@string/title_help"
         tools:layout="@layout/activity_goals" />
 </navigation>

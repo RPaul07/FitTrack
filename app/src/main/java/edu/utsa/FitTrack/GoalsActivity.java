@@ -1,31 +1,22 @@
-package edu.utsa.lab3;
+package edu.utsa.FitTrack;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class NewWorkoutActivity extends AppCompatActivity {
+public class GoalsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_new_workout);
+        setContentView(R.layout.activity_goals);
 
         TextView textView = findViewById(R.id.textView2);
         textView.setOnClickListener(v -> {
@@ -33,19 +24,14 @@ public class NewWorkoutActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        Button newExercise = findViewById(R.id.addExercise);
-        newExercise.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), AddWorkoutActivity.class);
-            startActivity(intent);
-        });
-
-        Button finishWorkout = findViewById(R.id.FinishWorkout);
-        finishWorkout.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+        Button setGoal = findViewById(R.id.setGoalBtn);
+        setGoal.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), NewGoalActivity.class);
             startActivity(intent);
         });
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
+        navView.setSelectedItemId(R.id.navigation_goals);
         navView.setItemIconTintList(null); // Removes icon tint
         navView.setItemTextColor(null);
         navView.setOnItemSelectedListener(item ->  {
@@ -59,8 +45,6 @@ public class NewWorkoutActivity extends AppCompatActivity {
                 finish();
                 return true;
             } else if(itemId == R.id.navigation_goals){
-                startActivity(new Intent(getApplicationContext(), GoalsActivity.class));
-                finish();
                 return true;
             }
             else if(itemId == R.id.navigation_help) {

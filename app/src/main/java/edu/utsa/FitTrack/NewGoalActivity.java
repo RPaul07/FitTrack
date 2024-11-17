@@ -1,27 +1,22 @@
-package edu.utsa.lab3;
+package edu.utsa.FitTrack;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class CustomPresetsActivity extends AppCompatActivity {
+public class NewGoalActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_custom_presets);
+        setContentView(R.layout.activity_new_goal);
 
         TextView textView = findViewById(R.id.textView2);
         textView.setOnClickListener(v -> {
@@ -29,13 +24,13 @@ public class CustomPresetsActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        Button newPreset = findViewById(R.id.newPreset);
-        newPreset.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), NewCustomPresetActivity.class);
-            startActivity(intent);
+        Button setGoal = findViewById(R.id.setGoalBtn);
+        setGoal.setOnClickListener(v -> {
+            finish();
         });
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
+        navView.setSelectedItemId(R.id.navigation_goals);
         navView.setItemIconTintList(null); // Removes icon tint
         navView.setItemTextColor(null);
         navView.setOnItemSelectedListener(item ->  {
@@ -49,8 +44,6 @@ public class CustomPresetsActivity extends AppCompatActivity {
                 finish();
                 return true;
             } else if(itemId == R.id.navigation_goals){
-                startActivity(new Intent(getApplicationContext(), GoalsActivity.class));
-                finish();
                 return true;
             }
             else if(itemId == R.id.navigation_help) {

@@ -1,11 +1,9 @@
-package edu.utsa.lab3;
+package edu.utsa.FitTrack;
 
 import androidx.activity.ComponentActivity;
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;

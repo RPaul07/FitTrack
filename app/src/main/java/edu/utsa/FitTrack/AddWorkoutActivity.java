@@ -1,4 +1,4 @@
-package edu.utsa.lab3;
+package edu.utsa.FitTrack;
 
 import android.content.Intent;
 import android.os.Bundle;

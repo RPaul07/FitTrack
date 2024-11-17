@@ -1,4 +1,4 @@
-package edu.utsa.lab3;
+package edu.utsa.FitTrack;
 
 import android.content.res.AssetManager;
 import android.os.Parcel;
@@ -7,7 +7,6 @@ import android.os.Parcelable;
 import androidx.annotation.NonNull;
 
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.Scanner;
 
 public class Account implements Parcelable {

@@ -1,29 +1,22 @@
-package edu.utsa.lab3;
+package edu.utsa.FitTrack;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class ReportsActivity extends AppCompatActivity {
+public class CalorieActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_reports);
+        setContentView(R.layout.activity_calorie);
 
         TextView textView = findViewById(R.id.textView2);
         textView.setOnClickListener(v -> {
@@ -31,19 +24,14 @@ public class ReportsActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        ImageView graph = findViewById(R.id.progress_graph);
-        Button graphProgress = findViewById(R.id.GraphProgress);
-        graphProgress.setOnClickListener(v -> {
-            graph.setVisibility(View.VISIBLE);
-        });
-
-        Button previousReports = findViewById(R.id.previousReports);
-        previousReports.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), PreviousReportsActivity.class);
+        Button trackMeal = findViewById(R.id.trackMeal);
+        trackMeal.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), TrackMealActivity.class);
             startActivity(intent);
         });
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
+        navView.setSelectedItemId(R.id.navigation_calorie);
         navView.setItemIconTintList(null); // Removes icon tint
         navView.setItemTextColor(null);
         navView.setOnItemSelectedListener(item ->  {
@@ -53,8 +41,6 @@ public class ReportsActivity extends AppCompatActivity {
                 finish();
                 return true;
             } else if (itemId == R.id.navigation_calorie) {
-                startActivity(new Intent(getApplicationContext(), CalorieActivity.class));
-                finish();
                 return true;
             } else if(itemId == R.id.navigation_goals){
                 startActivity(new Intent(getApplicationContext(), GoalsActivity.class));

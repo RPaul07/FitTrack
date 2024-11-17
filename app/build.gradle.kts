@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "edu.utsa.lab3"
+    namespace = "edu.utsa.FitTrack"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "edu.utsa.lab3"
+        applicationId = "edu.utsa.FitTrack"
         minSdk = 34
         targetSdk = 34
         versionCode = 1
